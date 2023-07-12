@@ -5,8 +5,8 @@ import { updateText } from "../actions/textActions";
 import { getNumber, getText } from "../selectors/selectors";
 
 function Counter() {
-    const { number } = useSelector( getNumber );
-    const { text } = useSelector( getText );
+    const number = useSelector( getNumber );
+    const text = useSelector( getText );
     const dispatch = useDispatch();
 
     const handleTextChange = ( e ) => {

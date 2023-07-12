@@ -1,3 +1,5 @@
+import { INCREMENT_NUMBER, DECREMENT_NUMBER } from '../actions/actionTypes';
+
 const initialState = {
     number: 0,
     text: 'zero'
@@ -6,13 +8,13 @@ const initialState = {
 const numberReducer = ( state = initialState, action ) => {
     console.log( state );
     switch ( action.type ) {
-        case 'INCREMENT_NUMBER':
+        case INCREMENT_NUMBER:
             return {
                 ...state,
                 number: state.number + 1,
                 text: action.payload,
             }
-        case 'DECREMENT_NUMBER':
+        case DECREMENT_NUMBER:
             return {
                 ...state,
                 number: state.number - 1,
